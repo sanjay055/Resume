@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjay Bansal | Resume</title>
+    <title><%= locals.myself.name %> | Resume</title>
     <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
@@ -11,12 +11,12 @@
     <!-- // Intro -->
     <header>
         <div class="content-wrap">
-            <img class="profile-img column-narrow" src="/images/pp.jpg" alt="Sanjay Bansal">
+            <img class="profile-img column-narrow" src="/images/pp.jpg" alt="<%= locals.myself.name %>">
             
             <div class="column-wide">
-              <h1>Sanjay Bansal</h1>
-              <h2>Web Developer </h2>
-              <p>As a developer, I specialize in creating modular and scalable front-end architectures. As an educator, I focused on creating inclusive learning environments and curriculum development.</p>
+              <h1><%= locals.myself.name %></h1>
+              <h2><%= locals.myself.title %></h2>
+              <p><%= locals.myself.bio %></p>
             </div>
         </div>
     </header>
@@ -29,12 +29,12 @@
 
                 <!-- Job Details: copy this block to add more positions. -->
                 <div class="column-narrow">
-                    <h3>Junior Programmer(Co-op)</h3>
-                    <p>Oqab Technologies Pvt. Ltd </p>
-                    <p>2018-Feb to 2018-May</p>
+                    <h3><%= locals.workExperience.W1.title %></h3>
+                    <p><%= locals.workExperience.W1.companyName %></p>
+                    <p><%= locals.workExperience.W1.time %></p>
                 </div>
                 <div class="column-wide">
-                  <p>Provides various front-end related services ranging from development work, consultations and speaking engagements.</p>
+                  <p><%= locals.workExperience.W1.jobDescription %></p>
                   <p>Key contributions:</p>
                     <ul>
                         <li>Perform development, upgrade, install development solutions.</li>
@@ -49,13 +49,13 @@
                 
                 <!-- Job Details -->
                 <div class="column-narrow">
-                    <h3>Customer Service Representative(Part time)</h3>
-                    <p>Shell gas station</p>
-                    <p>February 2017 -  present</p>
+                    <h3><%= locals.workExperience.W2.title %></h3>
+                    <p><%= locals.workExperience.W2.companyName %></p>
+                    <p><%= locals.workExperience.W2.time %></p>
                 </div>
                 
                 <div class="column-wide">
-                    <p>Interact with customers on behalf of an organization.Provide information about products and services, take orders, respond to customer complaints, and process returns.The target is to ensure excellent service standards and maintain high customer satisfaction</p>
+                    <p><%= locals.workExperience.W2.jobDescription %></p>
 
                     <p>Key contributions:</p>
                     <ul>
@@ -67,12 +67,12 @@
                 
                 <!-- Job Details -->
                 <div class="column-narrow">
-                    <h3>Junior Computer Technician</h3>
-                    <p>MEHTA COMPUTERS</p>
-                    <p>January 2014 - June 2014</p>
+                    <h3><%= locals.workExperience.W3.title %></h3>
+                    <p><%= locals.workExperience.W3.companyName %></p>
+                    <p><%= locals.workExperience.W3.time %></p>
                 </div>
                 <div class="column-wide">
-                    <p>Provide complete basic IT maintenance and support tasks, as well as managing the relationship between the customer and Company.</p>
+                    <p><%= locals.workExperience.W3.jobDescription %></p>
                     <p>Key contributions:</p>
                     <ul>
                         <li>Accept customer desktop and laptop systems in store for repair.</li>
@@ -92,8 +92,8 @@
                 <!-- School details: copy this block to add more schools. -->
                 <h3>Georgian College, Barrie, ON</h3>
                 <h4>Computer Programmer</h4>
-                <p>3.2/4.0 - Cumulative GPA.</p>
-                <p>Key Courses: Web and Internet Fundamentals, Programming Fundamentals, System Analysis, Object Oriented Programming, Internet of Things, Web Programming, The Mainframe Environment, Relational Database, Project Management</p>
+                <p><%= locals.education.educt1.description %></p>
+                
                 
             </div>
         </section>
@@ -106,14 +106,11 @@
             
             <!-- Social media and contact links. Add or remove any networks. -->
             <div class="contact-info">
-                <a href="">SanjayBansal@gmail.com</a>
-                <a href="">yourwebsite.com</a>
-                <a href="#">Twitter</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Facebook</a>
+                <a href="mailto:sanjaybansal521@gmail.com">SanjayBansal521@gmail.com</a>
+                <a href="https://www.linkedin.com/in/sanjay-bansal-181008155" target="_blank">LinkedIn</a>
             </div>
 
-            <p>Copyright by Sanjay Bansal</p>
+            <p>Copyright by <%= locals.myself.name %></p>
         </div>
     </footer>
 </body>
